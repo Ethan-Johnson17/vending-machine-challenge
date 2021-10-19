@@ -20,16 +20,57 @@
       <a class="navbar-brand ms-3" href="#">
         <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
           loading="lazy">
-        <span class="ms-2">vending-machine-challenge</span>
+        <span class="ms-2">The Vending Machine</span>
       </a>
     </nav>
   </header>
-  <main>
-    <div class="container-fluid">
+  <main class="bg-dark">
+    <div class="container bg-light">
       <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
+        <div class="col-3">
+          <div class="card" style="width: 18rem;">
+            <img src="https://pluspng.com/img-png/png-meal-monday-february-16-2015-1600.png"
+              class="card-img-top img-fluid" alt="Chicken">
+            <div class="card-body text-center">
+              <h5 class="card-title">Fried Chicken Basket</h5>
+              <button id="chicken" class="btn btn-primary">$10</button>
+            </div>
+          </div>
         </div>
+        <div class="col-3">
+          <div class="card" style="width: 18rem;">
+            <img src="https://clipground.com/images/mcdonalds-burger-png-2.png" class="card-img-top img-fluid"
+              alt="Burger">
+            <div class="card-body text-center">
+              <h5 class="card-title">Cheeseburger</h5>
+              <button id="burger" class="btn btn-primary">$5</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card" style="width: 18rem;">
+            <img src="http://www.worldofsnacks.com/uploads/1/3/1/2/13127180/s643667121527569464_p873_i6_w640.jpeg"
+              class="card-img-top img-fluid" alt="Chips">
+            <div class="card-body text-center">
+              <h5 class="card-title">Shrimp Chips</h5>
+              <button id="chips" class="btn btn-primary">$1.50</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="row flex-column">
+            <div class="col-md-5 m-3">Add: <img src="https://pngimg.com/uploads/money/money_PNG3529.png" alt="Dollar"
+                class="img-fluid" onclick="app.snacksController.addMoney(1)">
+            </div>
+            <div class="col-md-5 m-3">Add: <img
+                src="http://mintnewsblog.com/wp-content/uploads/2017/04/2017-america-the-beautiful-quarters-coin-proof-obverse.png"
+                alt="quarter" class="img-fluid" onclick="app.snacksController.addMoney(0.25)"> </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-4">Money added: <span id="moneyadded">--</span></div>
       </div>
     </div>
   </main>
